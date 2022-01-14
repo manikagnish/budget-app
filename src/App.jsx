@@ -5,6 +5,7 @@ import BudgetCard from "./components/BudgetCard";
 import { useState } from "react";
 import { useBudgets } from "./contexts/BudgetContext";
 import AddExpenseModal from "./components/AddExpenseModal";
+import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard";
 
 function App() {
   const { budgets, getBudgetExpenses } = useBudgets();
@@ -52,6 +53,7 @@ function App() {
               />
             );
           })}
+          <UncategorizedBudgetCard />
         </div>
       </Container>
       <AddBudgetModal
