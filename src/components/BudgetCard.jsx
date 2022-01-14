@@ -6,11 +6,11 @@ export default function BudgetCard({
   amount,
   max,
   gray,
-  onAddExpenseClick,
   hideButtons,
+  onAddExpenseClick,
+  onViewExpensesClick,
 }) {
   const classNames = [];
-
   if (amount > max) {
     classNames.push("bg-danger", "bg-opacity-10");
   } else if (gray) {
@@ -49,7 +49,9 @@ export default function BudgetCard({
             >
               Add Expense
             </Button>
-            <Button variant="outline-secondary">View Expenses</Button>
+            <Button onClick={onViewExpensesClick} variant="outline-secondary">
+              View Expenses
+            </Button>
           </Stack>
         )}
       </Card.Body>
